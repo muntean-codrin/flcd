@@ -5,7 +5,7 @@ main -> numar
 :(
     def i -> number
 	def n -> number
-	def is_prime -> boolean;
+	def is_prime -> boolean
 	is_prime = adevarat
 
 	scrie "Enter a positive integer: "
@@ -16,13 +16,14 @@ main -> numar
 		is_prime = fals
 	:}
 
-	pentru [i = 2, i <= n/2, i] {
+	pentru [i = 2, i <= n/2, i]
+	:(
 		daca [n % i == 0]
 		:(
 			is_prime = fals
 			iesi
 		:)
-	}
+	:)
 	
 	scrie "Numarul este prim: " + is_prime
 
