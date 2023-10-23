@@ -1,5 +1,0 @@
-I reviewed my colleague's lab and suggested that:
-
-- he should change the identifier definition to not use regex
-- be consistent with naming: either use all caps all the time, or not at all
-- change the program structure so he doesnt have to declare every variable at the beginning
