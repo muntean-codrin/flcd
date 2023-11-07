@@ -1,0 +1,20 @@
+
+def n1, n2, n3 -> numar, numar, numar
+
+printeaza "Enter three numbers: "
+citeste n_1
+citeste n2
+citeste n3
+
+daca [n1 >_= n2 si n1 >= n3]
+:(
+	scrie "Largest number: " + n1
+:)
+altfel daca [n2 >= n1 si n2 >= n3]
+:(
+	printeaza "Largest number: " + n2
+:)
+altfel
+:(
+	printeaza "Largest number: " + n3
+:)

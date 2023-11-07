@@ -1,0 +1,21 @@
+def n1 -> numar;
+def n2 -> numar;
+def n3 -> numar;
+
+printeaza "Enter three numbers: ";
+citeste n1;
+citeste n2;
+citeste n3;
+
+daca [n1 >= n2 si n1 >= n3]
+:(
+	printeaza "Largest number: " + n1;
+:)
+altfel daca [n2 >= n1 si n2 >= n3]
+:(
+	printeaza "Largest number: " + n2;
+:)
+altfel 
+:(
+	printeaza "Largest number: " + n3;
+:)

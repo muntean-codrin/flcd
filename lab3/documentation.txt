@@ -1,0 +1,5 @@
+documentation:
+We parse the program file using regex and then we iterate over all the tokens in order to find what every token is:
+if the token is an identifier and the token before it is a define token then we save it in the symbol table with the value 0
+constant (strings and numbers) are saved in the symbol table as values. The pif gets populated for each token with
+-1 for a keyword and with ('id', 'var_name') for variables
