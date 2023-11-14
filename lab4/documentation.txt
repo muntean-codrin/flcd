@@ -1,0 +1,20 @@
+We parse the file in order to obtain the possible states, initial state, out states, the alphabet and the transitions as triplets
+After that we have a funciton that can check if starting from 1 state it can reach antoher state based on a given sequence
+It checks all the valid tranactions and checkes that your sequence matches that transactions step by step by calling itself recursively
+
+
+
+BNF format of the fa.in file is inputFile
+
+non_zero_digit = 1|2| .. |9
+digit = 0|1|..|9
+number = non_zero_digit{digit}
+letter = a|b|..|z|A|B..|Z
+character = letter | digit
+line1 = "states={" {character} {"," character} "}"
+line2 = “initial_state””=”{character}
+line3 = "out_states" "=" "{" {character} {"," character} "}"
+line4 = "alphabet" "=" "{" {character} {"," character} "}"
+triplet = "(" {character} "," {character} "," {character} ")"
+line5 = "transitions" "=" "{" triplet {";" triplet} "}"
+inputFile = line1 "\n" line2 "\n" line3 "\n" line4 "\n" line5
