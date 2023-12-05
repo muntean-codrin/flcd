@@ -1,0 +1,39 @@
+program ::= cmpdstmt | decllist ";" cmpdstmt
+
+decllist ::= declaration | declaration ";" decllist
+
+declaration ::= IDENTIFIER ":" type
+
+type1 ::= "NUMAR" | "STRING" 
+
+arraydecl ::= "ARRAY" "[" type1 "]" 
+
+type  ::= type1|arraydecl
+
+cmpdstmt ::= stmtlist
+
+stmtlist ::= ("  ")* stmt | stmt "\n" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "=" expression
+
+expression ::= expression "+" term | term
+
+term ::= term "*" factor | factor
+
+factor ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "INSERT " | "DISPLAY" "(" IDENTIFIER ")"
+
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+
+ifstmt ::= "CASE" condition "\n" stmt | "CASE" condition "\n" stmt "ELSE" stmt
+
+whilestmt ::= "WHILE" condition "\n" stmt
+
+condition ::= expression RELATION expression
+
+RELATION ::= "-lw" | "-le" | "-e" | "-ne" | "-ge" | "-gt"
