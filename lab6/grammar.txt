@@ -1,0 +1,23 @@
+program ::= stmtlist | decllist ";" stmtlist
+
+decllist ::= declaration | declaration ";" decllist
+
+declaration ::= IDENTIFIER ":" type
+
+IDENTIFIER ::= "ceva"
+
+type1 ::= "NUMAR" | "STRING" 
+
+arraydecl ::= "ARRAY" "[" type1 "]" 
+
+type  ::= type1 | arraydecl
+
+stmtlist ::= stmt | stmt "\n" stmtlist
+
+stmt ::= simplstmt
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "="
+
+iostmt ::= "INSERT(" IDENTIFIER ")" | "DISPLAY(" IDENTIFIER ")"
