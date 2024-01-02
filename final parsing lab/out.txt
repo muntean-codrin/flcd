@@ -1,0 +1,414 @@
+
+Parse the program: int A ; A = 2 ;   int B ; citeste ( B ) ;  char C ; if ( A >= B ) {        C = 3 ;      printeaza ( C ) ;      printeaza ( A ) ;  }
+Stack: program $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: simplstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: declarationstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: type variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+
+Stack: int variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A int
+Removing match: 'int'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A
+
+Stack: letter variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A
+
+Stack: A variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ; A
+Removing match: 'A'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ;
+
+Stack: ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A ;
+Removing match: ';'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: simplstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: assignstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: variable = expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: letter variable = expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+
+Stack: A variable = expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 = A
+Removing match: 'A'
+
+Stack: variable = expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 =
+
+Stack: = expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2 =
+Removing match: '='
+
+Stack: expression ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2
+
+Stack: digit ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2
+
+Stack: 2 ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ; 2
+Removing match: '2'
+
+Stack: ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int ;
+Removing match: ';'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+
+Stack: simplstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+
+Stack: declarationstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+
+Stack: type variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+
+Stack: int variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B int
+Removing match: 'int'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B
+
+Stack: letter variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B
+
+Stack: B variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ; B
+Removing match: 'B'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ;
+
+Stack: ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste ;
+Removing match: ';'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste
+
+Stack: simplstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste
+
+Stack: iostmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste
+
+Stack: citeste ( variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B ( citeste
+Removing match: 'citeste'
+
+Stack: ( variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B (
+Removing match: '('
+
+Stack: variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B
+
+Stack: letter variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B
+
+Stack: B variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; ) B
+Removing match: 'B'
+
+Stack: variable ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; )
+
+Stack: ) ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ; )
+Removing match: ')'
+
+Stack: ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char ;
+Removing match: ';'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+
+Stack: simplstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+
+Stack: declarationstmt ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+
+Stack: type variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+
+Stack: char variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C char
+Removing match: 'char'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C
+
+Stack: letter variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C
+
+Stack: C variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ; C
+Removing match: 'C'
+
+Stack: variable ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ;
+
+Stack: ; stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if ;
+Removing match: ';'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if
+
+Stack: composedsmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if
+
+Stack: ifstmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if
+
+Stack: if ( boolexpression ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A ( if
+Removing match: 'if'
+
+Stack: ( boolexpression ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A (
+Removing match: '('
+
+Stack: boolexpression ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A
+
+Stack: identifier comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A
+
+Stack: variable comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A
+
+Stack: letter variable comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A
+
+Stack: A variable comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >= A
+Removing match: 'A'
+
+Stack: variable comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >=
+
+Stack: comparesign identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >=
+
+Stack: >= identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B >=
+Removing match: '>='
+
+Stack: identifier ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B
+
+Stack: variable ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B
+
+Stack: letter variable ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B
+
+Stack: B variable ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { ) B
+Removing match: 'B'
+
+Stack: variable ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { )
+
+Stack: ) stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C { )
+Removing match: ')'
+
+Stack: stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C {
+
+Stack: stmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C {
+
+Stack: composedsmt stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C {
+
+Stack: { groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C {
+Removing match: '{'
+
+Stack: groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: stmt groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: simplstmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: assignstmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: variable = expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: letter variable = expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+
+Stack: C variable = expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 = C
+Removing match: 'C'
+
+Stack: variable = expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 =
+
+Stack: = expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3 =
+Removing match: '='
+
+Stack: expression ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3
+
+Stack: digit ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3
+
+Stack: 3 ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ; 3
+Removing match: '3'
+
+Stack: ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza ;
+Removing match: ';'
+
+Stack: groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza
+
+Stack: stmt groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza
+
+Stack: simplstmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza
+
+Stack: iostmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza
+
+Stack: printeaza ( variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C ( printeaza
+Removing match: 'printeaza'
+
+Stack: ( variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C (
+Removing match: '('
+
+Stack: variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C
+
+Stack: letter variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C
+
+Stack: C variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; ) C
+Removing match: 'C'
+
+Stack: variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; )
+
+Stack: ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ; )
+Removing match: ')'
+
+Stack: ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza ;
+Removing match: ';'
+
+Stack: groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza
+
+Stack: stmt groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza
+
+Stack: simplstmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza
+
+Stack: iostmt ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza
+
+Stack: printeaza ( variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A ( printeaza
+Removing match: 'printeaza'
+
+Stack: ( variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A (
+Removing match: '('
+
+Stack: variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A
+
+Stack: letter variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A
+
+Stack: A variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; ) A
+Removing match: 'A'
+
+Stack: variable ) ; groupofstmts } stmtlist $
+Buffer: $ } ; )
+
+Stack: ) ; groupofstmts } stmtlist $
+Buffer: $ } ; )
+Removing match: ')'
+
+Stack: ; groupofstmts } stmtlist $
+Buffer: $ } ;
+Removing match: ';'
+
+Stack: groupofstmts } stmtlist $
+Buffer: $ }
+
+Stack: } stmtlist $
+Buffer: $ }
+Removing match: '}'
+
+Stack: stmtlist $
+Buffer: $
+
+Stack: $
+Buffer: $
+End of parsing! 

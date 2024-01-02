@@ -1,0 +1,12 @@
+int A ;
+A = 2 ; 
+
+int B ;
+citeste ( B ) ;
+
+char C ;
+if ( A >= B ) {   
+    C = 3 ; 
+    printeaza ( C ) ; 
+    printeaza ( A ) ; 
+}
