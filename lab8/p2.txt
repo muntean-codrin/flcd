@@ -1,0 +1,22 @@
+numar n1;
+numar n2;
+
+printeaza("Enter two numbers ");
+citeste(n1)
+citeste(n2)
+
+panacand[n1 != n2]
+:(
+	daca[n1 > n2]
+	:(
+		n1 = n1 - n2;
+	:)
+	altfel
+	:(
+		n2 = n2 - n1;
+	:)
+:)
+
+scrie("GDC is " + n1);
+
+
