@@ -1,0 +1,27 @@
+numar n1;
+numar n2;
+numar n3;
+
+printeaza("Enter three numbers ");
+citeste(n1);
+citeste(n2);
+citeste(n3);
+
+daca (n1 >= n2 si n1 >= n3)
+{
+	printeaza("Largest number ");
+	printeaza(n1);
+}
+altfel 
+{
+	daca (n2 >= n1 si n2 >= n3)
+	{
+		printeaza("Largest number ");
+		printeaza(n1);
+	}
+	altfel 
+	{
+		printeaza("Largest number ");
+		printeaza(n2);
+	}
+}

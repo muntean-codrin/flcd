@@ -1,0 +1,4 @@
+>lex spec.lxi
+>yacc –d spec.y
+>gcc lex.yy.c y.tab.c -o result –lfl
+>result<InputProgram
